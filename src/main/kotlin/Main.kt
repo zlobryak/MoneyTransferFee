@@ -1,7 +1,7 @@
 package ru.netology
 
 fun main() {
-    val amount = 140_234.0
+    val amount = 150_000.0
     val cardType = "Mastercard"
     val amountDay = 0.0 //Переводы за день
     val amountMonth = 0.0 //Переводы за месяц
@@ -93,7 +93,7 @@ fun feeCalculator(
     //и вычислим от какой суммы нужно вычислить комиссию
     val overLimit = maxOf(0.0, amountMonth + amount - noFeeLimit)
     return when (overLimit != 0.0) {
-        true -> maxOf(minFee, overLimit * fee + minFee)
+        true -> overLimit * fee + minFee
         else -> 0.0
 
     }
