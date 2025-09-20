@@ -3,13 +3,13 @@ package ru.netology
 fun main() {
     val amount = 150_000.0
     val cardType = "Mastercard"
-    val amountDay = 0.0 //Переводы за день
-    val amountMonth = 0.0 //Переводы за месяц
+    val amountDay = 75_000.0 //Переводы за день
+    val amountMonth = 75_000.0 //Переводы за месяц
 
     moneyTransfer(amount, cardType, amountDay, amountMonth)
 }
 
-fun moneyTransfer(amount: Double, cardType: String, amountDay: Double, amountMonth: Double) {
+fun moneyTransfer(amount: Double, cardType: String, amountDay: Double = 0.0, amountMonth: Double = 0.0) {
     //Значения для карт Visa
     val visaFee = 0.0075
     val visaMinFee = 35.0
